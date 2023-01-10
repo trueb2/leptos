@@ -407,6 +407,7 @@ where
             gloo_net::http::Request::post(url)
                 .header("Content-Type", content_type_header)
                 .header("Accept", accept_header)
+                .header("Accept-Encoding", "gzip")
                 .body(js_array)
                 .send()
                 .await
